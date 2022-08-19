@@ -9,9 +9,10 @@ import Emoji from './Emoji';
 
 function Introduction() {
   const hello = 'Hi ';
-  const introduction = `, I'm Danilova Valentina
-  Frontend Developer based in `;
-  const place = ' Yerevan, Armenia';
+  const introPart1 = ", I'm";
+  const name = ' Danilova Valentina';
+  const introPart2 = 'ReactJS developer based in ';
+  const place = 'Yerevan, Armenia';
 
   return (
     <Box
@@ -34,11 +35,20 @@ function Introduction() {
             >
               {hello}
               <Emoji label="waving hand" symbol="👋" />
-              {introduction}
-              <Place
-                sx={{ fontSize: '2.25rem', verticalAlign: 'bottom', mb: '0.375rem', mr: '-0.625rem' }}
-                color="secondary"
-              />
+              {introPart1}
+              <Typography component="span" variant="h4" color="primary">
+                {name}
+              </Typography>
+            </Typography>
+            <Typography
+              component="h1"
+              variant="h4"
+              color="text.primary"
+              gutterBottom
+              style={{ whiteSpace: 'pre-line' }}
+            >
+              {introPart2}
+              <Place sx={{ fontSize: '2.25rem', verticalAlign: 'bottom', mb: '0.375rem' }} color="secondary" />
               {place}
             </Typography>
             <Stack direction="row" spacing={2}>

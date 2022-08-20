@@ -1,6 +1,6 @@
-import { resolve } from 'path';
+const path = require('path');
 
-export default {
+module.exports = {
     "extends": [
       "airbnb",
       "react-app",
@@ -81,7 +81,7 @@ export default {
       "node/no-missing-import": "off",
       "@typescript-eslint/ban-ts-comment": "off",
       "i18n-json/identical-keys": [2, {
-        "filePath": resolve("./public/locales/en/translation.json")
+        "filePath": path.resolve("./public/locales/en/translation.json")
       }]
     },
     "overrides": [

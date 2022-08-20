@@ -1,7 +1,7 @@
 {
-  "introduction_greeting": "Hi ",
-  "introduction_intro_1": ", I'm",
-  "introduction_intro_2": "ReactJS developer based in ",
-  "introduction_name": " Danilova Valentina",
-  "introduction_place": "Yerevan, Armenia"
+  "introduction_greeting": "Привет ",
+  "introduction_intro_1": ", меня зовут",
+  "introduction_intro_2": "ReactJS developer, живу в городе ",
+  "introduction_name": " Данилова Валентина",
+  "introduction_place": "Ереван, Армения"
 }

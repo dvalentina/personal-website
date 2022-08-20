@@ -1,7 +1,41 @@
 {
-  "introduction_greeting": "Hi ",
-  "introduction_intro_1": ", I'm",
-  "introduction_intro_2": "ReactJS developer based in ",
-  "introduction_name": " Danilova Valentina",
-  "introduction_place": "Yerevan, Armenia"
+  "experience": {
+    "bachelor": {
+      "comment_first": "Physics, Mathematics, Informatics => ",
+      "comment_highlighted": "strong technical background",
+      "comment_last": "!",
+      "subtitle": "Education",
+      "title": "MIPT Bachelor's degree"
+    },
+    "next": {
+      "comment": "Looking forward to working with you!",
+      "title": "Your project!"
+    },
+    "sber_tech": {
+      "comment_first": "My first experience in ",
+      "comment_highlighted": "commercial team development",
+      "comment_last": " in a large company ",
+      "subtitle": "Work",
+      "title": "SberTech"
+    },
+    "techno_track": {
+      "comment": "Here I learned web development and created my first project as a part of a team!",
+      "subtitle": "Course",
+      "title": "TechnoTrack (MIPT & Mail.ru Group)"
+    }
+  },
+  "global": {
+    "contact": "Contact me!",
+    "resume_long": "Download resume",
+    "resume_short": "Resume",
+    "about": "About",
+    "work": "Work"
+  },
+  "introduction": {
+    "greeting": "Hi ",
+    "intro_1": ", I'm",
+    "intro_2": "ReactJS developer based in ",
+    "name": " Danilova Valentina",
+    "place": "Yerevan, Armenia"
+  }
 }

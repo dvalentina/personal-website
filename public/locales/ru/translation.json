@@ -1,7 +1,41 @@
 {
-  "introduction_greeting": "Привет ",
-  "introduction_intro_1": ", меня зовут",
-  "introduction_intro_2": "ReactJS developer, живу в городе ",
-  "introduction_name": " Данилова Валентина",
-  "introduction_place": "Ереван, Армения"
+  "experience": {
+    "bachelor": {
+      "comment_first": "Физика, математика, информатика => ",
+      "comment_highlighted": "хорошая техническая база",
+      "comment_last": "!",
+      "subtitle": "Образование",
+      "title": "Бакалавриат МФТИ"
+    },
+    "next": {
+      "comment": "Буду рада работать с вами!",
+      "title": "Ваш проект!"
+    },
+    "sber_tech": {
+      "comment_first": "Получила первый опыт ",
+      "comment_highlighted": "коммерческой командной разработки",
+      "comment_last": " в большой компании ",
+      "subtitle": "Работа",
+      "title": "СберТех"
+    },
+    "techno_track": {
+      "comment": "Здесь я научилась веб-разработке и создала свой первый проект в составе команды!",
+      "subtitle": "Курс",
+      "title": "Технотрек (МФТИ & Mail.ru Group)"
+    }
+  },
+  "global": {
+    "contact": "Напишите мне!",
+    "resume_long": "Загрузить резюме",
+    "resume_short": "Резюме",
+    "about": "Обо мне",
+    "work": "Работы"
+  },
+  "introduction": {
+    "greeting": "Привет ",
+    "intro_1": ", меня зовут",
+    "intro_2": "Разрабатываю на ReactJS, живу в ",
+    "name": " Данилова Валентина",
+    "place": "Ереване, Армения"
+  }
 }

@@ -24,6 +24,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prestart": "npm run lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,7 +52,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "eslint": "^8.20.0",
+    "eslint": "^8.22.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^7.0.1",

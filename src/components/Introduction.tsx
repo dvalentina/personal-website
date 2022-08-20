@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { AttachFile, HandshakeTwoTone, Place } from '@mui/icons-material';
 import { Box, Button, Container, Stack, Typography } from '@mui/material';
@@ -8,11 +9,7 @@ import avatar from '../images/avatar_bg_red.png';
 import Emoji from './Emoji';
 
 function Introduction() {
-  const hello = 'Hi ';
-  const introPart1 = ", I'm";
-  const name = ' Danilova Valentina';
-  const introPart2 = 'ReactJS developer based in ';
-  const place = 'Yerevan, Armenia';
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -33,11 +30,11 @@ function Introduction() {
               gutterBottom
               style={{ whiteSpace: 'pre-line' }}
             >
-              {hello}
+              {t('introduction.greeting')}
               <Emoji label="waving hand" symbol="👋" />
-              {introPart1}
+              {t('introduction.intro_1')}
               <Typography component="span" variant="h4" color="primary">
-                {name}
+                {t('introduction.name')}
               </Typography>
             </Typography>
             <Typography
@@ -47,16 +44,16 @@ function Introduction() {
               gutterBottom
               style={{ whiteSpace: 'pre-line' }}
             >
-              {introPart2}
+              {t('introduction.intro_2')}
               <Place sx={{ fontSize: '2.25rem', verticalAlign: 'bottom', mb: '0.375rem' }} color="secondary" />
-              {place}
+              {t('introduction.place')}
             </Typography>
             <Stack direction="row" spacing={2}>
               <Button size="large" variant="contained" endIcon={<HandshakeTwoTone />}>
-                Contact me!
+                {t('global.contact')}
               </Button>
               <Button size="large" variant="outlined" endIcon={<AttachFile />}>
-                Dowload resume
+                {t('global.resume_long')}
               </Button>
             </Stack>
           </Box>

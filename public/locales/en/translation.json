@@ -25,10 +25,10 @@
     }
   },
   "global": {
+    "about": "About",
     "contact": "Contact me!",
     "resume_long": "Download resume",
     "resume_short": "Resume",
-    "about": "About",
     "work": "Work"
   },
   "introduction": {

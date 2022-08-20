@@ -25,10 +25,10 @@
     }
   },
   "global": {
+    "about": "Обо мне",
     "contact": "Напишите мне!",
     "resume_long": "Загрузить резюме",
     "resume_short": "Резюме",
-    "about": "Обо мне",
     "work": "Работы"
   },
   "introduction": {

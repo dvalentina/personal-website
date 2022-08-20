@@ -1,4 +1,6 @@
-{
+import { resolve } from 'path';
+
+export default {
     "extends": [
       "airbnb",
       "react-app",
@@ -6,7 +8,8 @@
       "plugin:react/recommended",
       "stylelint",
       "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@typescript-eslint/recommended",
+      "plugin:i18n-json/recommended"
     ],
     "parserOptions": {
       "ecmaVersion": "latest",
@@ -17,7 +20,7 @@
       "import",
       "react",
       "prettier",
-      "simple-import-sort"
+      "simple-import-sort",
     ],
     "settings": {
       "react": {
@@ -76,7 +79,10 @@
         }
       ],
       "node/no-missing-import": "off",
-      "@typescript-eslint/ban-ts-comment": "off"
+      "@typescript-eslint/ban-ts-comment": "off",
+      "i18n-json/identical-keys": [2, {
+        "filePath": resolve("./public/locales/en/translation.json")
+      }]
     },
     "overrides": [
       {

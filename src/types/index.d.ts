@@ -5,3 +5,9 @@ export interface IExperienceElement {
   comment: string | React.ReactElement;
   icon: React.ReactElement;
 }
+
+export interface ISocialsElement {
+  key: string;
+  link: string;
+  icon: React.ReactElement;
+}

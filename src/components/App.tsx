@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { theme } from '../themes/theme';
 
+import Contact from './Contact/Contact';
 import Experience from './Experience';
 import Header from './Header';
 import Introduction from './Introduction';
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Introduction />
         <Experience />
+        <Contact />
       </ThemeProvider>
     </CssBaseline>
   );

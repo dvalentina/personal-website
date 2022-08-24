@@ -68,7 +68,7 @@ function Experience() {
     },
   ];
 
-  const TimelineArray: React.ReactElement[] = data.map((element, index, array) => {
+  const timelineArray: React.ReactElement[] = data.map((element, index, array) => {
     const isFirst = index === 0;
     const isLast = index === array.length - 1;
 
@@ -103,7 +103,7 @@ function Experience() {
       }}
     >
       <Container maxWidth="lg">
-        <Timeline position="left">{TimelineArray}</Timeline>
+        <Timeline position="left">{timelineArray}</Timeline>
       </Container>
     </Box>
   );

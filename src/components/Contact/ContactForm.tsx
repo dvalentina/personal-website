@@ -4,7 +4,7 @@ import { send } from 'emailjs-com';
 
 import { Send } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
-import { Grid, Paper, TextField, Typography } from '@mui/material';
+import { Alert, Grid, Paper, Snackbar, TextField, Typography } from '@mui/material';
 
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../../constants/constants';
 
@@ -26,9 +26,12 @@ function ContactForm() {
 
   const [loading, setLoading] = useState(false);
 
-  function formErrors() {
-    return formData.nameError || formData.emailError || formData.subjectError || formData.messageError;
-  }
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [alertSuccess, setAlertSuccess] = useState(false);
+
+  const handleAlertClose = () => {
+    setAlertOpen(false);
+  };
 
   const validateField = (name: string, value: string) => {
     if (value.trim().length === 0) {
@@ -69,25 +72,27 @@ function ContactForm() {
     }));
   };
 
-  const handleLoadingChange = () => {
-    setLoading(!loading);
-  };
+  function afterSubmit(success: boolean) {
+    setLoading(false);
+    setAlertSuccess(success);
+    setAlertOpen(true);
+  }
 
   const onSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
 
     validateOnSubmit();
 
+    const formErrors = formData.nameError || formData.emailError || formData.subjectError || formData.messageError;
+
     if (!formErrors) {
-      handleLoadingChange();
+      setLoading(true);
       send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_USER_ID)
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          handleLoadingChange();
+        .then(() => {
+          afterSubmit(true);
         })
-        .catch((err) => {
-          console.log('FAILED...', err);
-          handleLoadingChange();
+        .catch(() => {
+          afterSubmit(false);
         });
     }
   };
@@ -167,7 +172,6 @@ function ContactForm() {
             type="submit"
             fullWidth
             loading={loading}
-            loadingIndicator="Sending…"
             loadingPosition="end"
             endIcon={<Send />}
           >
@@ -175,6 +179,15 @@ function ContactForm() {
           </LoadingButton>
         </Grid>
       </Grid>
+      <Snackbar open={alertOpen} autoHideDuration={6000} onClose={handleAlertClose}>
+        <Alert onClose={handleAlertClose} severity={alertSuccess ? 'success' : 'error'} sx={{ width: '100%' }}>
+          {alertSuccess
+            ? `The letter sent successfully! :)
+            I will answer shortly.`
+            : `Sorry, some error occurred :(
+              Try again later?`}
+        </Alert>
+      </Snackbar>
     </Paper>
   );
 }

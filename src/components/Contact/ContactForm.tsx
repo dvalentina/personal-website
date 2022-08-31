@@ -11,19 +11,60 @@ import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../../
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
+    nameError: false,
+    nameHelp: '',
     email: '',
+    emailError: false,
+    emailHelp: '',
     subject: '',
+    subjectError: false,
+    subjectHelp: '',
     message: '',
+    messageError: false,
+    messageHelp: '',
   });
 
   const [loading, setLoading] = useState(false);
 
+  function formErrors() {
+    return formData.nameError || formData.emailError || formData.subjectError || formData.messageError;
+  }
+
+  const validateField = (name: string, value: string) => {
+    if (value.trim().length === 0) {
+      setFormData((prev) => ({
+        ...prev,
+        ...{
+          [`${name}Error`]: true,
+          [`${name}Help`]: 'This field should not be empty',
+        },
+      }));
+    }
+  };
+
+  const validateOnBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+
+    validateField(name, value);
+  };
+
+  function validateOnSubmit() {
+    validateField('name', formData.name);
+    validateField('email', formData.email);
+    validateField('subject', formData.subject);
+    validateField('message', formData.message);
+  }
+
   const changeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
+    const { name } = event.target;
+
     setFormData((prev) => ({
       ...prev,
       ...{
-        [event.target.name]: event.target.value,
+        [name]: event.target.value,
+        [`${name}Error`]: false,
+        [`${name}Help`]: '',
       },
     }));
   };
@@ -34,16 +75,21 @@ function ContactForm() {
 
   const onSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    handleLoadingChange();
-    send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_USER_ID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        handleLoadingChange();
-      })
-      .catch((err) => {
-        console.log('FAILED...', err);
-        handleLoadingChange();
-      });
+
+    validateOnSubmit();
+
+    if (!formErrors) {
+      handleLoadingChange();
+      send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData, EMAILJS_USER_ID)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          handleLoadingChange();
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+          handleLoadingChange();
+        });
+    }
   };
 
   return (
@@ -51,9 +97,10 @@ function ContactForm() {
       <Typography component="h2" variant="h6" mb={2}>
         ...or write me a letter through this form!
       </Typography>
-      <Grid container component="form" noValidate autoComplete="off" rowSpacing={2} onSubmit={onSubmit}>
+      <Grid container noValidate component="form" autoComplete="off" rowSpacing={2} onSubmit={onSubmit}>
         <Grid item xs={12}>
           <TextField
+            color="secondary"
             required
             fullWidth
             id="name"
@@ -61,10 +108,14 @@ function ContactForm() {
             name="name"
             value={formData.name}
             onChange={changeInputHandler}
+            error={formData.nameError}
+            helperText={formData.nameHelp}
+            onBlur={validateOnBlur}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
+            color="secondary"
             required
             fullWidth
             id="email"
@@ -73,10 +124,14 @@ function ContactForm() {
             type="email"
             value={formData.email}
             onChange={changeInputHandler}
+            error={formData.emailError}
+            helperText={formData.emailHelp}
+            onBlur={validateOnBlur}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
+            color="secondary"
             required
             fullWidth
             id="subject"
@@ -84,10 +139,14 @@ function ContactForm() {
             label="Subject"
             value={formData.subject}
             onChange={changeInputHandler}
+            error={formData.subjectError}
+            helperText={formData.subjectHelp}
+            onBlur={validateOnBlur}
           />
         </Grid>
         <Grid item xs={12}>
           <TextField
+            color="secondary"
             required
             fullWidth
             multiline
@@ -97,6 +156,9 @@ function ContactForm() {
             rows={10}
             value={formData.message}
             onChange={changeInputHandler}
+            error={formData.messageError}
+            helperText={formData.messageHelp}
+            onBlur={validateOnBlur}
           />
         </Grid>
         <Grid item xs={12}>

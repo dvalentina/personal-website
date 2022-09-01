@@ -6,7 +6,7 @@ export interface IExperienceElement {
   icon: React.ReactElement;
 }
 
-export interface ISocialsElement {
+export interface ISocialElement {
   key: string;
   link: string;
   icon: React.ReactElement;

@@ -1,4 +1,17 @@
 {
+  "contact": {
+    "alert_error": "Что-то пошло не так... :( Попробуйте позже?",
+    "alert_success": "Письмо успешно отправлено! :) Я вам скоро отвечу.",
+    "email": "ПОЧТА",
+    "form_email": "Ваш e-mail",
+    "form_message": "Сообщение",
+    "form_name": "Ваше имя",
+    "form_subject": "Тема",
+    "form_submit": "Отправить",
+    "form_title": "Вы также можете отправить мне письмо через эту форму:",
+    "social_media": "СОЦСЕТИ",
+    "title": "СВЯЗАТЬСЯ"
+  },
   "experience": {
     "bachelor": {
       "comment_first": "Физика, математика, информатика => ",

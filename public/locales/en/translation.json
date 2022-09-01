@@ -1,4 +1,17 @@
 {
+  "contact": {
+    "alert_error": "Sorry, something went wrong... :( Try again later?",
+    "alert_success": "The letter sent successfully! :) I will answer shortly.",
+    "email": "E-MAIL",
+    "form_email": "Your e-mail",
+    "form_message": "Message",
+    "form_name": "Your name",
+    "form_subject": "Subject",
+    "form_submit": "Send",
+    "form_title": "You may also write me a letter through this form:",
+    "social_media": "SOCIAL MEDIA",
+    "title": "CONTACT"
+  },
   "experience": {
     "bachelor": {
       "comment_first": "Physics, Mathematics, Informatics => ",

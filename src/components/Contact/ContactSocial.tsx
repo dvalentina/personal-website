@@ -1,41 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Close, ContentCopy, GitHub, LinkedIn, Telegram } from '@mui/icons-material';
+import { Close, ContentCopy } from '@mui/icons-material';
 import { Box, IconButton, Paper, Snackbar, Typography } from '@mui/material';
 
-import { ISocialsElement } from '../../types';
+import { EMAIL, SOCIAL_MEDIA } from '../../constants/constants';
 
-function ContactSocials() {
+function ContactSocial() {
+  const { t } = useTranslation();
   const [openSnackbar, setOpenSnackbar] = React.useState(false);
 
-  const socials: ISocialsElement[] = [
-    {
-      key: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/valentina-danilova-564576237/',
-      icon: <LinkedIn fontSize="large" />,
-    },
-    {
-      key: 'GitHub',
-      link: 'https://github.com/dvalentina',
-      icon: <GitHub fontSize="large" />,
-    },
-    {
-      key: 'Telegram',
-      link: 'https://t.me/danilova_v_v',
-      icon: <Telegram fontSize="large" />,
-    },
-  ];
-
-  const socialsArray: React.ReactElement[] = socials.map((element) => (
+  const socialComponents: React.ReactElement[] = SOCIAL_MEDIA.map((element) => (
     <IconButton key={element.key} size="large" href={element.link}>
       {element.icon}
     </IconButton>
   ));
 
-  const email = 'contact@dvalentina.me';
-
   const copyEmail = () => {
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText(EMAIL);
     setOpenSnackbar(true);
   };
 
@@ -50,14 +32,14 @@ function ContactSocials() {
   return (
     <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
       <Typography component="h2" variant="h6" align="center">
-        SOCIALS
+        {t('contact.social_media')}
       </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>{socialsArray}</Box>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>{socialComponents}</Box>
       <Typography component="h2" variant="h6" align="center">
-        E-MAIL
+        {t('contact.email')}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Typography align="center">{email}</Typography>
+        <Typography align="center">{EMAIL}</Typography>
         <IconButton size="small" onClick={copyEmail}>
           <ContentCopy fontSize="small" />
         </IconButton>
@@ -77,4 +59,4 @@ function ContactSocials() {
   );
 }
 
-export default ContactSocials;
+export default ContactSocial;

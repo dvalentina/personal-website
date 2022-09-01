@@ -1,19 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Container, Grid, Typography } from '@mui/material';
 
 import ContactForm from './ContactForm';
-import ContactSocials from './ContactSocials';
+import ContactSocial from './ContactSocial';
 
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <Container maxWidth="xl" sx={{ mb: 4 }}>
       <Typography component="h1" variant="h4" align="center">
-        CONTACT
+        {t('contact.title')}
       </Typography>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={12} md={4} lg={6}>
-          <ContactSocials />
+          <ContactSocial />
         </Grid>
         <Grid item xs={12} sm={12} md={8} lg={6}>
           <ContactForm />

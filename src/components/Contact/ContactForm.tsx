@@ -1,6 +1,7 @@
 /* eslint-disable node/no-unsupported-features/es-syntax */
 import React, { useState } from 'react';
 import { send } from 'emailjs-com';
+import { useTranslation } from 'react-i18next';
 
 import { Send } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
@@ -9,6 +10,8 @@ import { Alert, Grid, Paper, Snackbar, TextField, Typography } from '@mui/materi
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../../constants/constants';
 
 function ContactForm() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     nameError: false,
@@ -33,7 +36,7 @@ function ContactForm() {
     setAlertOpen(false);
   };
 
-  const validateField = (name: string, value: string) => {
+  function validateField(name: string, value: string) {
     if (value.trim().length === 0) {
       setFormData((prev) => ({
         ...prev,
@@ -43,7 +46,7 @@ function ContactForm() {
         },
       }));
     }
-  };
+  }
 
   const validateOnBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -100,7 +103,7 @@ function ContactForm() {
   return (
     <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
       <Typography component="h2" variant="h6" mb={2}>
-        ...or write me a letter through this form!
+        {t('contact.form_title')}
       </Typography>
       <Grid container noValidate component="form" autoComplete="off" rowSpacing={2} onSubmit={onSubmit}>
         <Grid item xs={12}>
@@ -109,7 +112,7 @@ function ContactForm() {
             required
             fullWidth
             id="name"
-            label="Name"
+            label={t('contact.form_name')}
             name="name"
             value={formData.name}
             onChange={changeInputHandler}
@@ -124,7 +127,7 @@ function ContactForm() {
             required
             fullWidth
             id="email"
-            label="E-mail"
+            label={t('contact.form_email')}
             name="email"
             type="email"
             value={formData.email}
@@ -141,7 +144,7 @@ function ContactForm() {
             fullWidth
             id="subject"
             name="subject"
-            label="Subject"
+            label={t('contact.form_subject')}
             value={formData.subject}
             onChange={changeInputHandler}
             error={formData.subjectError}
@@ -157,7 +160,7 @@ function ContactForm() {
             multiline
             id="message"
             name="message"
-            label="Message"
+            label={t('contact.form_message')}
             rows={10}
             value={formData.message}
             onChange={changeInputHandler}
@@ -175,17 +178,13 @@ function ContactForm() {
             loadingPosition="end"
             endIcon={<Send />}
           >
-            Send
+            {t('contact.form_submit')}
           </LoadingButton>
         </Grid>
       </Grid>
       <Snackbar open={alertOpen} autoHideDuration={6000} onClose={handleAlertClose}>
         <Alert onClose={handleAlertClose} severity={alertSuccess ? 'success' : 'error'} sx={{ width: '100%' }}>
-          {alertSuccess
-            ? `The letter sent successfully! :)
-            I will answer shortly.`
-            : `Sorry, some error occurred :(
-              Try again later?`}
+          {alertSuccess ? t('contact.alert_success') : t('contact.alert_error')}
         </Alert>
       </Snackbar>
     </Paper>

@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import { Container, Grid, Typography } from '@mui/material';
 
+import { ID_CONTACT } from '../../constants/constants';
+
 import ContactForm from './ContactForm';
 import ContactSocial from './ContactSocial';
 
@@ -10,7 +12,7 @@ function Contact() {
   const { t } = useTranslation();
 
   return (
-    <Container maxWidth="xl" sx={{ mb: 4 }}>
+    <Container id={ID_CONTACT} maxWidth="xl" sx={{ mb: 4 }}>
       <Typography component="h1" variant="h4" align="center">
         {t('contact.title')}
       </Typography>

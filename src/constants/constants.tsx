@@ -30,3 +30,5 @@ export const EMAIL = 'contact@dvalentina.me';
 
 export const CV_LINK = 'files/CV_01-09-2022.pdf';
 export const CV_DOWNLOAD_NAME = 'CV_React-Dev_D-Valentina.pdf';
+
+export const ID_CONTACT = 'contact';

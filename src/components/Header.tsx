@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone } from '@mui/icons-material';
 import { AppBar, Box, Button, Link, Toolbar, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK } from '../constants/constants';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT } from '../constants/constants';
 
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -30,7 +30,13 @@ function Header() {
           >
             {t('global.CV_short')}
           </Button>
-          <Button color="secondary" variant="contained" endIcon={<HandshakeTwoTone />}>
+          <Button
+            component={Link}
+            href={`#${ID_CONTACT}`}
+            color="secondary"
+            variant="contained"
+            endIcon={<HandshakeTwoTone />}
+          >
             {t('global.contact')}
           </Button>
         </Toolbar>

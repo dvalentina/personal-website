@@ -1,8 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AttachFile, HandshakeTwoTone } from '@mui/icons-material';
-import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
+import { FileDownloadOutlined, HandshakeTwoTone } from '@mui/icons-material';
+import { AppBar, Box, Button, Link, Toolbar, Typography } from '@mui/material';
+
+import { CV_DOWNLOAD_NAME, CV_LINK } from '../constants/constants';
 
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -19,8 +21,14 @@ function Header() {
           <LanguageSwitcher />
           <Button color="inherit">{t('global.about')}</Button>
           <Button color="inherit">{t('global.work')}</Button>
-          <Button color="inherit" endIcon={<AttachFile sx={{ mr: '10px', ml: '-5px' }} />}>
-            {t('global.resume_short')}
+          <Button
+            color="inherit"
+            component={Link}
+            href={CV_LINK}
+            download={CV_DOWNLOAD_NAME}
+            endIcon={<FileDownloadOutlined sx={{ mr: '10px', ml: '-5px' }} />}
+          >
+            {t('global.CV_short')}
           </Button>
           <Button color="secondary" variant="contained" endIcon={<HandshakeTwoTone />}>
             {t('global.contact')}

@@ -40,8 +40,8 @@
   "global": {
     "about": "About",
     "contact": "Contact me!",
-    "resume_long": "Download resume",
-    "resume_short": "Resume",
+    "CV_long": "Download CV",
+    "CV_short": "Download CV",
     "work": "Work"
   },
   "introduction": {

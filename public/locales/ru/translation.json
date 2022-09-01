@@ -40,8 +40,8 @@
   "global": {
     "about": "Обо мне",
     "contact": "Напишите мне!",
-    "resume_long": "Загрузить резюме",
-    "resume_short": "Резюме",
+    "CV_long": "Загрузить резюме",
+    "CV_short": "Резюме",
     "work": "Работы"
   },
   "introduction": {

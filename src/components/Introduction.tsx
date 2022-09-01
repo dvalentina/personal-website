@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AttachFile, HandshakeTwoTone, Place } from '@mui/icons-material';
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { FileDownloadOutlined, HandshakeTwoTone, Place } from '@mui/icons-material';
+import { Box, Button, Container, Link, Stack, Typography } from '@mui/material';
 
+import { CV_DOWNLOAD_NAME, CV_LINK } from '../constants/constants';
 import avatar from '../images/avatar_bg_red.png';
 
 import Emoji from './Emoji';
@@ -52,8 +53,15 @@ function Introduction() {
               <Button size="large" variant="contained" endIcon={<HandshakeTwoTone />}>
                 {t('global.contact')}
               </Button>
-              <Button size="large" variant="outlined" endIcon={<AttachFile />}>
-                {t('global.resume_long')}
+              <Button
+                size="large"
+                variant="outlined"
+                component={Link}
+                href={CV_LINK}
+                download={CV_DOWNLOAD_NAME}
+                endIcon={<FileDownloadOutlined />}
+              >
+                {t('global.CV_long')}
               </Button>
             </Stack>
           </Box>

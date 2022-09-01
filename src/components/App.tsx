@@ -6,6 +6,7 @@ import { theme } from '../themes/theme';
 
 import Contact from './Contact/Contact';
 import Experience from './Experience';
+import Footer from './Footer';
 import Header from './Header';
 import Introduction from './Introduction';
 
@@ -17,6 +18,7 @@ function App() {
         <Introduction />
         <Experience />
         <Contact />
+        <Footer />
       </ThemeProvider>
     </CssBaseline>
   );

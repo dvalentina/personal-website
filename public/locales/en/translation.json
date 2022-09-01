@@ -38,10 +38,10 @@
     }
   },
   "global": {
-    "about": "About",
-    "contact": "Contact me!",
     "CV_long": "Download CV",
     "CV_short": "Download CV",
+    "about": "About",
+    "contact": "Contact me!",
     "work": "Work"
   },
   "introduction": {

@@ -9,6 +9,7 @@ import Experience from './Experience';
 import Footer from './Footer';
 import Header from './Header';
 import Introduction from './Introduction';
+import Skills from './Skills';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Header />
         <Introduction />
         <Experience />
+        <Skills />
         <Contact />
         <Footer />
       </ThemeProvider>

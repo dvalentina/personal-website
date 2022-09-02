@@ -32,3 +32,10 @@ export const CV_LINK = 'files/CV_01-09-2022.pdf';
 export const CV_DOWNLOAD_NAME = 'CV_React-Dev_D-Valentina.pdf';
 
 export const ID_CONTACT = 'contact';
+
+export const SKILLS: { [id: string]: string[] } = {
+  main: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
+  tools: ['git', 'eslint', 'json-server', 'Node.js', 'npm'],
+  other: ['React Testing Library', 'Redux', 'REST API', 'GraphQL', 'Less'],
+  web: ['Figma', 'Jira', 'GitHub', 'BitBucket'],
+};

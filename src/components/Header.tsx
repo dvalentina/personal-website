@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { FileDownloadOutlined, HandshakeTwoTone } from '@mui/icons-material';
-import { AppBar, Box, Button, Link, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material';
 
 import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../constants/constants';
 
@@ -53,9 +53,13 @@ function Header() {
             color="secondary"
             variant="contained"
             endIcon={<HandshakeTwoTone />}
+            sx={{ display: { xs: 'none', sm: 'flex' } }}
           >
             {t('global.contact')}
           </Button>
+          <IconButton href={`#${ID_CONTACT}`} color="secondary" sx={{ display: { xs: 'flex', sm: 'none' } }}>
+            <HandshakeTwoTone />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>

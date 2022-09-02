@@ -40,9 +40,9 @@
   "global": {
     "CV_long": "Download CV",
     "CV_short": "Download CV",
-    "about": "About",
     "contact": "Contact me!",
-    "work": "Work"
+    "experience": "Experience",
+    "skills": "Skills"
   },
   "introduction": {
     "greeting": "Hi ",

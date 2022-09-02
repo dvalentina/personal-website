@@ -13,6 +13,7 @@ import {
 } from '@mui/lab';
 import { Box, Container, Typography } from '@mui/material';
 
+import { ID_EXPERIENCE } from '../constants/constants';
 import { IExperienceElement } from '../types';
 
 import Emoji from './Emoji';
@@ -95,14 +96,11 @@ function Experience() {
   });
 
   return (
-    <Box
-      sx={{
-        bgcolor: 'background.paper',
-        pt: 8,
-        pb: 6,
-      }}
-    >
+    <Box id={ID_EXPERIENCE} sx={{ pt: 16 }}>
       <Container maxWidth="lg">
+        <Typography component="h1" variant="h4" align="center" mb={2}>
+          EXPERIENCE
+        </Typography>
         <Timeline position="left">{timelineArray}</Timeline>
       </Container>
     </Box>

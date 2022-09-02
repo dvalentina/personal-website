@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone, Place } from '@mui/icons-material';
 import { Box, Button, Container, Link, Stack, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK } from '../constants/constants';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT } from '../constants/constants';
 import avatar from '../images/avatar_bg_red.png';
 
 import Emoji from './Emoji';
@@ -13,13 +13,7 @@ function Introduction() {
   const { t } = useTranslation();
 
   return (
-    <Box
-      sx={{
-        bgcolor: 'background.paper',
-        pt: 8,
-        pb: 6,
-      }}
-    >
+    <Box sx={{ pt: 8, my: 12 }}>
       <Container maxWidth="lg">
         <Box sx={{ display: 'flex' }}>
           <img src={avatar} alt="avatar" style={{ width: '300px', height: '300px' }} />
@@ -50,7 +44,14 @@ function Introduction() {
               {t('introduction.place')}
             </Typography>
             <Stack direction="row" spacing={2}>
-              <Button size="large" variant="contained" endIcon={<HandshakeTwoTone />}>
+              <Button
+                component={Link}
+                href={`#${ID_CONTACT}`}
+                color="primary"
+                size="large"
+                variant="contained"
+                endIcon={<HandshakeTwoTone />}
+              >
                 {t('global.contact')}
               </Button>
               <Button

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, Chip, Container, Grid, Typography } from '@mui/material';
 
-import { SKILLS } from '../constants/constants';
+import { ID_SKILLS, SKILLS } from '../constants/constants';
 
 function Skills() {
   const skillsRows: { [id: string]: React.ReactElement } = {};
@@ -22,7 +22,7 @@ function Skills() {
   });
 
   return (
-    <Box sx={{ flexGrow: 1, mb: 6 }}>
+    <Box id={ID_SKILLS} sx={{ pt: 16 }}>
       <Container maxWidth="md">
         <Typography component="h1" variant="h4" align="center" mb={2}>
           SKILLS

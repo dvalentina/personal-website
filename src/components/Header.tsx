@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone } from '@mui/icons-material';
 import { AppBar, Box, Button, Link, Toolbar, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT } from '../constants/constants';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../constants/constants';
 
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -15,12 +15,18 @@ function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Frontend Dev
-          </Typography>
+          <Button color="inherit" component={Link} href="#" sx={{ mr: 'auto' }}>
+            <Typography variant="h6" component="h6" sx={{ textTransform: 'none' }}>
+              Frontend Dev
+            </Typography>
+          </Button>
           <LanguageSwitcher />
-          <Button color="inherit">{t('global.about')}</Button>
-          <Button color="inherit">{t('global.work')}</Button>
+          <Button color="inherit" component={Link} href={`#${ID_EXPERIENCE}`}>
+            {t('global.experience')}
+          </Button>
+          <Button color="inherit" component={Link} href={`#${ID_SKILLS}`}>
+            {t('global.skills')}
+          </Button>
           <Button
             color="inherit"
             component={Link}
@@ -41,7 +47,7 @@ function Header() {
           </Button>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+      {/* <Toolbar /> */}
     </Box>
   );
 }

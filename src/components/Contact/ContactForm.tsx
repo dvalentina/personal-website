@@ -101,7 +101,7 @@ function ContactForm() {
   };
 
   return (
-    <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+    <Paper variant="outlined" sx={{ mt: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
       <Typography component="h2" variant="h6" mb={2}>
         {t('contact.form_title')}
       </Typography>

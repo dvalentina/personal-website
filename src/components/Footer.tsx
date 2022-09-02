@@ -21,37 +21,47 @@ function Footer() {
       [theme.breakpoints.up('md')]: {
         textAlign: align,
       },
-      color: 'white',
+      color: alpha(theme.palette.secondary.main, 0.75),
     };
   }
 
   return (
     <Box sx={{ flexGrow: 1, py: 3, backgroundColor: 'primary.dark' }}>
       <Container maxWidth="lg">
-        <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Grid item xs={12} md={4}>
-            <Typography sx={typographyStyle('right')}>Avatar by linktoauthor made in this picrew</Typography>
-            <Typography sx={typographyStyle('right')}>This website s GitHub repository</Typography>
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
+          <Grid item xs={12} md>
+            <Typography sx={typographyStyle('right')} component="p" variant="body2">
+              Avatar by linktoauthor made in this picrew
+            </Typography>
+            <Typography sx={typographyStyle('right')} component="p" variant="body2">
+              This website s GitHub repository
+            </Typography>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md="auto">
             <Box
               sx={{
                 mx: 'auto',
                 p: 1,
                 backgroundColor: alpha(theme.palette.secondary.main, 0.1),
-                color: 'white',
+                color: alpha(theme.palette.secondary.main, 0.75),
                 borderRadius: '4px',
               }}
             >
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>{socialComponents}</Box>
-              <Typography align="center">{EMAIL}</Typography>
+              <Typography align="center" component="p" variant="body2">
+                {EMAIL}
+              </Typography>
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={4}>
-            <Typography sx={typographyStyle('left')}>Days since last update: 0</Typography>
-            <Typography sx={typographyStyle('left')}>Made by Danilova Valentina</Typography>
+          <Grid item xs={12} md>
+            <Typography sx={typographyStyle('left')} component="p" variant="body2">
+              Days since last update: 0
+            </Typography>
+            <Typography sx={typographyStyle('left')} component="p" variant="body2">
+              Made by Danilova Valentina
+            </Typography>
           </Grid>
         </Grid>
       </Container>

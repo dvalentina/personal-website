@@ -7,7 +7,7 @@ import { Send } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
 import { Alert, Grid, Paper, Snackbar, TextField, Typography } from '@mui/material';
 
-import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../../constants/constants';
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } from '../../../constants/constants';
 
 function ContactForm() {
   const { t } = useTranslation();

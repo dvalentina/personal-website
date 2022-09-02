@@ -4,12 +4,12 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import { theme } from '../themes/theme';
 
-import Contact from './Contact/Contact';
-import Experience from './Experience';
+import Header from './Header/Header';
+import Contact from './pages/Contact/Contact';
+import Experience from './pages/Experience';
+import Introduction from './pages/Introduction';
+import Skills from './pages/Skills';
 import Footer from './Footer';
-import Header from './Header';
-import Introduction from './Introduction';
-import Skills from './Skills';
 
 function App() {
   return (

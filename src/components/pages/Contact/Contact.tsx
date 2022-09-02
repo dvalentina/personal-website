@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Box, Container, Grid, Typography } from '@mui/material';
 
-import { ID_CONTACT } from '../../constants/constants';
+import { ID_CONTACT } from '../../../constants/constants';
 
 import ContactForm from './ContactForm';
 import ContactSocial from './ContactSocial';

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box, Chip, Container, Grid, Typography } from '@mui/material';
 
-import { ID_SKILLS, SKILLS } from '../constants/constants';
+import { ID_SKILLS, SKILLS } from '../../constants/constants';
 
 function Skills() {
   const skillsRows: { [id: string]: React.ReactElement } = {};

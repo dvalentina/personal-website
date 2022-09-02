@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Close, ContentCopy } from '@mui/icons-material';
 import { Box, IconButton, Paper, Snackbar, Typography } from '@mui/material';
 
-import { EMAIL, SOCIAL_MEDIA } from '../../constants/constants';
+import { EMAIL, SOCIAL_MEDIA } from '../../../constants/constants';
 
 function ContactSocial() {
   const { t } = useTranslation();

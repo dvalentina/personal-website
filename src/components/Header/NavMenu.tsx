@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone, Menu as MenuIcon } from '@mui/icons-material';
 import { Box, Divider, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../constants/constants';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../../constants/constants';
 
 function NavMenu() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);

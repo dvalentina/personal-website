@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone } from '@mui/icons-material';
 import { AppBar, Box, Button, IconButton, Link, Toolbar, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../constants/constants';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../../constants/constants';
 
 import LanguageSwitcher from './LanguageSwitcher';
 import NavMenu from './NavMenu';

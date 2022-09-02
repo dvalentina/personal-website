@@ -4,10 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { FileDownloadOutlined, HandshakeTwoTone, Place } from '@mui/icons-material';
 import { Box, Button, Container, Link, Stack, Typography } from '@mui/material';
 
-import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT } from '../constants/constants';
-import avatar from '../images/avatar_bg_red.png';
-
-import Emoji from './Emoji';
+import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT } from '../../constants/constants';
+import avatar from '../../images/avatar_bg_red.png';
+import Emoji from '../Emoji';
 
 function Introduction() {
   const { t } = useTranslation();

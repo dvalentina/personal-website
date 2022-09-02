@@ -13,10 +13,9 @@ import {
 } from '@mui/lab';
 import { Box, Container, Typography } from '@mui/material';
 
-import { ID_EXPERIENCE } from '../constants/constants';
-import { IExperienceElement } from '../types';
-
-import Emoji from './Emoji';
+import { ID_EXPERIENCE } from '../../constants/constants';
+import { IExperienceElement } from '../../types';
+import Emoji from '../Emoji';
 
 function Experience() {
   const { t } = useTranslation();

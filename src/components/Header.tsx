@@ -7,6 +7,7 @@ import { AppBar, Box, Button, Link, Toolbar, Typography } from '@mui/material';
 import { CV_DOWNLOAD_NAME, CV_LINK, ID_CONTACT, ID_EXPERIENCE, ID_SKILLS } from '../constants/constants';
 
 import LanguageSwitcher from './LanguageSwitcher';
+import NavMenu from './NavMenu';
 
 function Header() {
   const { t } = useTranslation();
@@ -15,16 +16,25 @@ function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
-          <Button color="inherit" component={Link} href="#" sx={{ mr: 'auto' }}>
-            <Typography variant="h6" component="h6" sx={{ textTransform: 'none' }}>
-              Frontend Dev
-            </Typography>
-          </Button>
+          <NavMenu />
+          <Typography
+            variant="h6"
+            component="a"
+            href="#"
+            sx={{ display: { xs: 'none', md: 'flex' }, mr: 'auto', color: 'inherit', textDecoration: 'none' }}
+          >
+            Frontend Dev
+          </Typography>
           <LanguageSwitcher />
-          <Button color="inherit" component={Link} href={`#${ID_EXPERIENCE}`}>
+          <Button
+            color="inherit"
+            component={Link}
+            href={`#${ID_EXPERIENCE}`}
+            sx={{ display: { xs: 'none', md: 'flex' } }}
+          >
             {t('global.experience')}
           </Button>
-          <Button color="inherit" component={Link} href={`#${ID_SKILLS}`}>
+          <Button color="inherit" component={Link} href={`#${ID_SKILLS}`} sx={{ display: { xs: 'none', md: 'flex' } }}>
             {t('global.skills')}
           </Button>
           <Button
@@ -33,6 +43,7 @@ function Header() {
             href={CV_LINK}
             download={CV_DOWNLOAD_NAME}
             endIcon={<FileDownloadOutlined sx={{ mr: '10px', ml: '-5px' }} />}
+            sx={{ display: { xs: 'none', sm: 'flex' } }}
           >
             {t('global.CV_short')}
           </Button>
@@ -47,7 +58,6 @@ function Header() {
           </Button>
         </Toolbar>
       </AppBar>
-      {/* <Toolbar /> */}
     </Box>
   );
 }

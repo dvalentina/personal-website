@@ -71,11 +71,12 @@ function Experience() {
   const timelineArray: React.ReactElement[] = data.map((element, index, array) => {
     const isFirst = index === 0;
     const isLast = index === array.length - 1;
+    const isWork = element.subtitle.toString().toLowerCase().includes('work');
 
     return (
       <TimelineItem key={element.key}>
         <TimelineOppositeContent
-          sx={{ m: 'auto 0', maxWidth: { xs: '110px', sm: 'unset' }, minWidth: { xs: '110px', sm: 'unset' } }}
+          sx={{ m: 'auto 0', maxWidth: { xs: '40vw', sm: 'unset' }, minWidth: { xs: '40vw', sm: 'unset' } }}
           variant="body2"
           color="text.secondary"
         >
@@ -83,12 +84,19 @@ function Experience() {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector sx={isFirst ? { visibility: 'hidden' } : { display: 'block' }} />
-          <TimelineDot color={isLast ? 'secondary' : 'primary'} variant={isLast ? 'filled' : 'outlined'}>
+          <TimelineDot color={isLast ? 'secondary' : 'primary'} variant={isLast || isWork ? 'filled' : 'outlined'}>
             {element.icon}
           </TimelineDot>
           <TimelineConnector sx={isLast ? { visibility: 'hidden' } : { display: 'block' }} />
         </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
+        <TimelineContent
+          sx={{
+            py: '12px',
+            px: 2,
+            maxWidth: { xs: '40vw', sm: 'unset' },
+            minWidth: { xs: '40vw', sm: 'unset' },
+          }}
+        >
           <Typography variant="h6" component="span">
             {element.title}
           </Typography>

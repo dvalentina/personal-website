@@ -75,7 +75,7 @@ function Experience() {
     return (
       <TimelineItem key={element.key}>
         <TimelineOppositeContent
-          sx={{ m: 'auto 0', maxWidth: { xs: '110px', sm: 'unset' } }}
+          sx={{ m: 'auto 0', maxWidth: { xs: '110px', sm: 'unset' }, minWidth: { xs: '110px', sm: 'unset' } }}
           variant="body2"
           color="text.secondary"
         >

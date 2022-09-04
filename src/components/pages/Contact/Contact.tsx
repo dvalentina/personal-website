@@ -12,7 +12,7 @@ function Contact() {
   const { t } = useTranslation();
 
   return (
-    <Box id={ID_CONTACT} sx={{ pt: 16, height: '100vh' }}>
+    <Box id={ID_CONTACT} sx={{ pt: 16, minHeight: '100vh', mb: 4 }}>
       <Container maxWidth="xl">
         <Typography component="h1" variant="h4" align="center">
           {t('contact.title')}

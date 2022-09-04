@@ -38,8 +38,8 @@
     }
   },
   "global": {
-    "CV_long": "Загрузить резюме",
-    "CV_short": "Резюме",
+    "CV_long": "Загрузить CV",
+    "CV_short": "CV",
     "contact": "Напишите мне!",
     "experience": "Опыт",
     "skills": "Навыки"

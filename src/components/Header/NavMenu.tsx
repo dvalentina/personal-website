@@ -18,9 +18,9 @@ function NavMenu() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, ml: { xs: '-3px', sm: '-12px' } }}>
       <IconButton
-        size="large"
+        size="medium"
         aria-label="account of current user"
         aria-controls="menu-appbar"
         aria-haspopup="true"

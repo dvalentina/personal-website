@@ -45,7 +45,7 @@ function Buttons() {
   const { t } = useTranslation();
 
   return (
-    <Stack direction="row" spacing={2} justifyContent={{ xs: 'center', md: 'inherit' }}>
+    <Stack direction="row" spacing={2} justifyContent={{ xs: 'center', md: 'flex-start' }}>
       <Button
         component={Link}
         href={`#${ID_CONTACT}`}
@@ -87,14 +87,20 @@ function Introduction() {
     <Box sx={{ pt: 8, my: 12 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md="auto" sx={{ display: 'flex' }} justifyContent={{ xs: 'center', md: 'inherit' }}>
+          <Grid item xs={12} md="auto" sx={{ display: 'flex' }} justifyContent={{ xs: 'center', md: 'flex-start' }}>
             <img src={avatar} alt="avatar" style={{ width: '300px', height: '300px' }} />
           </Grid>
-          <Grid item xs={12} md>
-            <Box>
-              <Text />
-              <Buttons />
-            </Box>
+          <Grid
+            item
+            xs={12}
+            md
+            sx={{ display: 'flex' }}
+            flexDirection="column"
+            alignItems={{ xs: 'center', md: 'flex-start' }}
+            justifyContent={{ xs: 'flex-start', md: 'center' }}
+          >
+            <Text />
+            <Buttons />
           </Grid>
         </Grid>
       </Container>

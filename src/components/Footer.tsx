@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { alpha, Box, Container, Grid, IconButton, Typography, useTheme } from '@mui/material';
+import { OpenInNew } from '@mui/icons-material';
+import { Box, Container, Grid, IconButton, Link, Typography, useTheme } from '@mui/material';
 
 import { EMAIL, SOCIAL_MEDIA } from '../constants/constants';
 
@@ -21,21 +22,32 @@ function Footer() {
       [theme.breakpoints.up('md')]: {
         textAlign: align,
       },
-      color: alpha(theme.palette.secondary.main, 0.75),
     };
   }
 
   return (
-    <Box sx={{ flexGrow: 1, py: 3, backgroundColor: 'primary.dark' }}>
+    <Box sx={{ flexGrow: 1, py: 3, backgroundColor: 'secondary.main' }}>
       <Container maxWidth="lg">
         <Grid container spacing={3} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md>
-            <Typography sx={typographyStyle('right')} component="p" variant="body2">
-              Avatar by linktoauthor made in this picrew
-            </Typography>
-            <Typography sx={typographyStyle('right')} component="p" variant="body2">
+          <Grid item xs={12} md display="flex" flexDirection="column">
+            <Link
+              sx={typographyStyle('right')}
+              variant="body2"
+              href="https://github.com/dvalentina/personal-website"
+              underline="none"
+            >
               This website s GitHub repository
-            </Typography>
+              <OpenInNew fontSize="inherit" />
+            </Link>
+            <Link
+              sx={typographyStyle('right')}
+              variant="body2"
+              underline="none"
+              href="https://picrew.me/image_maker/1076186"
+            >
+              Avatar is made in this picrew
+              <OpenInNew fontSize="inherit" />
+            </Link>
           </Grid>
 
           <Grid item xs={12} md="auto">
@@ -43,8 +55,7 @@ function Footer() {
               sx={{
                 mx: 'auto',
                 p: 1,
-                backgroundColor: alpha(theme.palette.secondary.main, 0.1),
-                color: alpha(theme.palette.secondary.main, 0.75),
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
                 borderRadius: '4px',
               }}
             >

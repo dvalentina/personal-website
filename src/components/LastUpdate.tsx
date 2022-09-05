@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Typography } from '@mui/material';
 import { request } from '@octokit/request';
@@ -6,6 +7,8 @@ import { request } from '@octokit/request';
 import { ILastUpdate } from '../types';
 
 function LastUpdate({ style }: ILastUpdate) {
+  const { t } = useTranslation();
+
   const [error, setError] = useState('');
   const [daysSince, setDaysSince] = useState(100);
   const [loading, setLoading] = useState(true);
@@ -50,20 +53,24 @@ function LastUpdate({ style }: ILastUpdate) {
 
   function composeMessage() {
     if (daysSince > 90) {
-      return 'more than 90 days ago';
+      return t('footer.long_time');
+    }
+
+    if (daysSince === 1) {
+      return t('footer.singular');
     }
 
     const lastDigit = daysSince % 10;
 
-    if (lastDigit === 1) {
-      return `${daysSince} день назад`;
+    if (lastDigit === 1 && daysSince !== 11) {
+      return `${daysSince} ${t('footer.digit_one')}`;
     }
 
-    if (lastDigit === 2) {
-      return `${daysSince} дня назад`;
+    if (lastDigit >= 2 && lastDigit <= 4 && !(daysSince >= 12 && daysSince <= 14)) {
+      return `${daysSince} ${t('footer.digit_two')}`;
     }
 
-    return `${daysSince} дней назад`;
+    return `${daysSince} ${t('footer.plural')}`;
   }
 
   if (error) {
@@ -72,7 +79,8 @@ function LastUpdate({ style }: ILastUpdate) {
 
   return (
     <Typography sx={style('left')} component="p" variant="body2">
-      Last update: {loading ? 'loading...' : composeMessage()}
+      {t('footer.last_update')}
+      {loading ? t('footer.loading') : composeMessage()}
     </Typography>
   );
 }

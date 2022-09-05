@@ -2,15 +2,15 @@
   "contact": {
     "alert_error": "Sorry, something went wrong... :( Try again later?",
     "alert_success": "The letter sent successfully! :) I will answer shortly.",
-    "email": "E-MAIL",
+    "email": "E-mail",
     "form_email": "Your e-mail",
     "form_message": "Message",
     "form_name": "Your name",
     "form_subject": "Subject",
     "form_submit": "Send",
     "form_title": "You may also write me a letter through this form:",
-    "social_media": "SOCIAL MEDIA",
-    "title": "CONTACT"
+    "social_media": "Social media",
+    "title": "Contact"
   },
   "experience": {
     "bachelor": {
@@ -37,6 +37,18 @@
       "title": "TechnoTrack (MIPT & Mail.ru Group)"
     }
   },
+  "footer": {
+    "avatar": "Avatar is made in this picrew",
+    "digit_one": "days ago",
+    "digit_two": "days ago",
+    "last_update": "Last update: ",
+    "loading": "loading...",
+    "long_time": "more than 90 days ago",
+    "made_by": "Made by Danilova Valentina",
+    "plural": "days ago",
+    "repository": "The website's GitHub repository",
+    "singular": "a day ago"
+  },
   "global": {
     "CV_long": "Download CV",
     "CV_short": "CV",
@@ -45,10 +57,11 @@
     "skills": "Skills"
   },
   "introduction": {
-    "greeting": "Hi ",
-    "intro_1": ", I'm",
-    "intro_2": "ReactJS developer based in ",
-    "name": " Danilova Valentina",
+    "intro_1": "My name is ",
+    "intro_2": "I develop web applications with ReactJS",
+    "intro_3": "and live in ",
+    "name": "Danilova Valentina ",
     "place": "Yerevan, Armenia"
-  }
+  },
+  "skills.subtitle": "I have an experience with following technologies:"
 }

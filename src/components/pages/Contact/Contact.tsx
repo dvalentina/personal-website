@@ -14,7 +14,7 @@ function Contact() {
   return (
     <Box id={ID_CONTACT} sx={{ pt: 16, minHeight: '100vh', mb: 4 }}>
       <Container maxWidth="xl">
-        <Typography component="h1" variant="h4" align="center">
+        <Typography component="h1" variant="h4" align="center" textTransform="uppercase">
           {t('contact.title')}
         </Typography>
         <Grid container spacing={4}>

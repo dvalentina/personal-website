@@ -25,16 +25,19 @@ function Text() {
   return (
     <Box>
       <Typography component="h1" variant="h4" color="text.primary" gutterBottom sx={typographyStyle}>
-        {t('introduction.greeting')}
-        <Emoji label="waving hand" symbol="👋" />
-        {t('introduction.intro_1')}
+        <Emoji label="waving hand" symbol="👋" /> {t('introduction.intro_1')}
         <Typography component="span" variant="h4" color="primary">
           {t('introduction.name')}
         </Typography>
       </Typography>
+
       <Typography component="h1" variant="h4" color="text.primary" gutterBottom sx={typographyStyle}>
         {t('introduction.intro_2')}
-        <Place sx={{ fontSize: '2.25rem', verticalAlign: 'bottom', mb: '0.375rem' }} color="secondary" />
+      </Typography>
+
+      <Typography component="h1" variant="h4" color="text.primary" gutterBottom sx={typographyStyle}>
+        {t('introduction.intro_3')}
+        <Place sx={{ fontSize: 'inherit', verticalAlign: 'bottom', mb: '0.375rem' }} color="secondary" />
         {t('introduction.place')}
       </Typography>
     </Box>
@@ -83,18 +86,20 @@ function Buttons() {
 }
 
 function Introduction() {
+  const { t } = useTranslation();
+
   return (
     <Box sx={{ pt: 8, my: 12 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md="auto" sx={{ display: 'flex' }} justifyContent={{ xs: 'center', md: 'flex-start' }}>
+          <Grid item xs={12} md={4} display="flex" flexDirection="column" alignItems="center">
             <img src={avatar} alt="avatar" style={{ width: '300px', height: '300px' }} />
           </Grid>
           <Grid
             item
             xs={12}
-            md
-            sx={{ display: 'flex' }}
+            md={8}
+            display="flex"
             flexDirection="column"
             alignItems={{ xs: 'center', md: 'flex-start' }}
             justifyContent={{ xs: 'flex-start', md: 'center' }}

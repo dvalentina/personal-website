@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { OpenInNew } from '@mui/icons-material';
 import { Box, Container, Grid, IconButton, Link, Typography, useTheme } from '@mui/material';
@@ -8,6 +9,7 @@ import { EMAIL, SOCIAL_MEDIA } from '../constants/constants';
 import LastUpdate from './LastUpdate';
 
 function Footer() {
+  const { t } = useTranslation();
   const theme = useTheme();
 
   const socialComponents: React.ReactElement[] = SOCIAL_MEDIA.map((element) => (
@@ -36,7 +38,7 @@ function Footer() {
               href="https://github.com/dvalentina/personal-website"
               underline="none"
             >
-              This website s GitHub repository
+              {t('footer.repository')}
               <OpenInNew fontSize="inherit" />
             </Link>
             <Link
@@ -45,7 +47,7 @@ function Footer() {
               underline="none"
               href="https://picrew.me/image_maker/1076186"
             >
-              Avatar is made in this picrew
+              {t('footer.avatar')}
               <OpenInNew fontSize="inherit" />
             </Link>
           </Grid>
@@ -69,7 +71,7 @@ function Footer() {
           <Grid item xs={12} md>
             <LastUpdate style={typographyStyle} />
             <Typography sx={typographyStyle('left')} component="p" variant="body2">
-              Made by Danilova Valentina
+              {t('footer.made_by')}
             </Typography>
           </Grid>
         </Grid>

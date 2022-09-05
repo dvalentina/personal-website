@@ -31,11 +31,11 @@ function ContactSocial() {
 
   return (
     <Paper variant="outlined" sx={{ mt: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
-      <Typography component="h2" variant="h6" align="center">
+      <Typography component="h2" variant="h6" align="center" textTransform="uppercase">
         {t('contact.social_media')}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>{socialComponents}</Box>
-      <Typography component="h2" variant="h6" align="center">
+      <Typography component="h2" variant="h6" align="center" textTransform="uppercase">
         {t('contact.email')}
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

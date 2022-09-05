@@ -109,8 +109,8 @@ function Experience() {
   return (
     <Box id={ID_EXPERIENCE} sx={{ pt: 16 }}>
       <Container maxWidth="lg">
-        <Typography component="h1" variant="h4" align="center" mb={2}>
-          EXPERIENCE
+        <Typography component="h1" variant="h4" align="center" mb={2} textTransform="uppercase">
+          {t('global.experience')}
         </Typography>
         <Timeline position="left">{timelineArray}</Timeline>
       </Container>

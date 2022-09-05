@@ -5,6 +5,8 @@ import { Box, Container, Grid, IconButton, Link, Typography, useTheme } from '@m
 
 import { EMAIL, SOCIAL_MEDIA } from '../constants/constants';
 
+import LastUpdate from './LastUpdate';
+
 function Footer() {
   const theme = useTheme();
 
@@ -14,16 +16,14 @@ function Footer() {
     </IconButton>
   ));
 
-  function typographyStyle(align: string) {
-    return {
-      [theme.breakpoints.up('xs')]: {
-        textAlign: 'center',
-      },
-      [theme.breakpoints.up('md')]: {
-        textAlign: align,
-      },
-    };
-  }
+  const typographyStyle = (align: string) => ({
+    [theme.breakpoints.up('xs')]: {
+      textAlign: 'center',
+    },
+    [theme.breakpoints.up('md')]: {
+      textAlign: align,
+    },
+  });
 
   return (
     <Box sx={{ flexGrow: 1, py: 3, backgroundColor: 'secondary.main' }}>
@@ -67,9 +67,7 @@ function Footer() {
           </Grid>
 
           <Grid item xs={12} md>
-            <Typography sx={typographyStyle('left')} component="p" variant="body2">
-              Days since last update: 0
-            </Typography>
+            <LastUpdate style={typographyStyle} />
             <Typography sx={typographyStyle('left')} component="p" variant="body2">
               Made by Danilova Valentina
             </Typography>

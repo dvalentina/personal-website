@@ -11,3 +11,11 @@ export interface ISocialElement {
   link: string;
   icon: React.ReactElement;
 }
+
+export interface ILastUpdate {
+  style: (align: string) => {
+    [x: string]: {
+      textAlign: string;
+    };
+  };
+}

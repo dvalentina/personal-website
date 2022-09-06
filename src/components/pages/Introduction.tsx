@@ -86,8 +86,6 @@ function Buttons() {
 }
 
 function Introduction() {
-  const { t } = useTranslation();
-
   return (
     <Box sx={{ pt: 8, my: 12 }}>
       <Container maxWidth="lg">

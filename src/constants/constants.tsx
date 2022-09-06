@@ -38,6 +38,6 @@ export const ID_CONTACT = 'contact';
 export const SKILLS: { [id: string]: string[] } = {
   main: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
   tools: ['git', 'eslint', 'json-server', 'Node.js', 'npm'],
-  other: ['React Testing Library', 'Redux', 'REST API', 'GraphQL', 'Less'],
+  other: ['React Testing Library', 'Redux', 'REST API', 'GraphQL', 'Less', 'Material UI', 'Ant Design'],
   web: ['Figma', 'Jira', 'GitHub', 'BitBucket'],
 };

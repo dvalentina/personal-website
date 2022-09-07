@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "homepage": "http://www.dvalentina.me",
+  "homepage": "http://dvalentina.me",
   "private": true,
   "type": "commonjs",
   "dependencies": {
@@ -38,7 +38,7 @@
     "lint": "eslint --fix --ext .json --format visualstudio public/locales/",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "echo 'www.dvalentina.me' > ./build/CNAME && gh-pages -d build"
+    "deploy": "echo 'dvalentina.me' > ./build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

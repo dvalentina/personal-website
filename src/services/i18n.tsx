@@ -12,7 +12,7 @@ i18next
     },
     debug: process.env.NODE_ENV === 'development',
     backend: {
-      loadPath: '../personal-website/locales/{{lng}}/translation.json',
+      loadPath: '../locales/{{lng}}/translation.json',
     },
   });
 export default i18next;

@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "homepage": "http://www.dvalentina.me/personal-website",
+  "homepage": "http://www.dvalentina.me",
   "private": true,
   "type": "commonjs",
   "dependencies": {

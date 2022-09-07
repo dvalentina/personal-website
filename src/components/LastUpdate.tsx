@@ -23,7 +23,7 @@ function LastUpdate({ style }: ILastUpdate) {
   useEffect(() => {
     request({
       method: 'GET',
-      url: '/repos/{owner}/{repo}/pulls?base=gh-pages',
+      url: '/repos/{owner}/{repo}/pulls?state=closed&base=main',
       owner: 'dvalentina',
       repo: 'personal-website',
     })
@@ -36,10 +36,10 @@ function LastUpdate({ style }: ILastUpdate) {
           throw Error('Empty');
         }
 
-        const lastEvent = new Date(response.data[0].created_at);
+        const mergeDate = new Date(response.data[0].merged_at);
         const today = new Date();
 
-        const days = calcDays(lastEvent, today);
+        const days = calcDays(mergeDate, today);
 
         if (days < daysSince) {
           setDaysSince(days);

@@ -14,5 +14,5 @@
     "moduleResolution": "node",
   },
   "include": ["src/**/*", "constants.js"],
-  "exclude": ["node_modules", "build/**/*"]
+  "exclude": ["node_modules", "build/**/*", "public/locales"]
 }

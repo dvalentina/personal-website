@@ -1,0 +1,67 @@
+{
+  "contact": {
+    "alert_error": "Sorry, something went wrong... :( Try again later?",
+    "alert_success": "The letter sent successfully! :) I will answer shortly.",
+    "email": "E-mail",
+    "form_email": "Your e-mail",
+    "form_message": "Message",
+    "form_name": "Your name",
+    "form_subject": "Subject",
+    "form_submit": "Send",
+    "form_title": "You may also write me a letter through this form:",
+    "social_media": "Social media",
+    "title": "Contact"
+  },
+  "experience": {
+    "bachelor": {
+      "comment_first": "Physics, Mathematics, Informatics => ",
+      "comment_highlighted": "strong technical background",
+      "comment_last": "!",
+      "subtitle": "Education",
+      "title": "MIPT Bachelor's degree"
+    },
+    "next": {
+      "comment": "Looking forward to working with you!",
+      "title": "Your project!"
+    },
+    "sber_tech": {
+      "comment_first": "My first experience in ",
+      "comment_highlighted": "commercial team development",
+      "comment_last": " in a large company ",
+      "subtitle": "Work",
+      "title": "SberTech"
+    },
+    "techno_track": {
+      "comment": "Here I learned web development and created my first project as a part of a team!",
+      "subtitle": "Course",
+      "title": "TechnoTrack (MIPT & Mail.ru Group)"
+    }
+  },
+  "footer": {
+    "avatar": "Avatar is made in this picrew",
+    "digit_one": "days ago",
+    "digit_two": "days ago",
+    "last_update": "Last update: ",
+    "loading": "loading...",
+    "long_time": "more than 90 days ago",
+    "made_by": "Made by Danilova Valentina",
+    "plural": "days ago",
+    "repository": "The website's GitHub repository",
+    "singular": "a day ago"
+  },
+  "global": {
+    "CV_long": "Download CV",
+    "CV_short": "CV",
+    "contact": "Contact me!",
+    "experience": "Experience",
+    "skills": "Skills"
+  },
+  "introduction": {
+    "intro_1": "My name is ",
+    "intro_2": "I develop web applications with ReactJS",
+    "intro_3": "and live in ",
+    "name": "Danilova Valentina ",
+    "place": "Yerevan, Armenia"
+  },
+  "skills.subtitle": "I have an experience with following technologies:"
+}

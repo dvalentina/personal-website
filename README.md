@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Personal Website ![example workflow](https://github.com/dvalentina/personal-website/actions/workflows/ci.yml/badge.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:wave: I'm Danilova Valentina and this is the codebase of my personal website.
 
-## Available Scripts
+This project is deployed :rocket: and available at [dvalentina.me](http://dvalentina.me)!
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+The website is made as a landing page with the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+:speech_balloon: 4 main blocks: Introduction, Experience, Skills, and Contacts\
+:iphone:&nbsp; Responsive layout\
+:globe_with_meridians: Localization (eng/ru)\
+:open_file_folder: CV download\
+:envelope: Letter sending form\
+:date: *Last update* feature
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> The *last update* feature was really fun to make.\
+Its text displays, how many days have passed since the last pull request to the *main* branch was merged.\
+You can find it in the footer of the website.
 
-### `npm test`
+## Tools & Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this project, I used [React](https://reactjs.org/) library for building a user interface and [Create-React-App](https://create-react-app.dev/) to start building an SPA.
 
-### `npm run build`
+The application's layout was implemented with [Material UI](https://mui.com/material-ui/getting-started/overview/) components.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Its localization is made with the help of the [react-i18next](https://react.i18next.com/) library.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The letter sending form is powered by [EmailJS](https://www.emailjs.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application runs on a [Node.js](https://nodejs.org/en/) environment, and [npm](https://www.npmjs.com/) manages its packages.
 
-### `npm run eject`
+For strong typing of JavaScript, I used [TypeScript](https://www.typescriptlang.org/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To maintain the quality and uniformity of the code, I relied on the help of [eslint](https://eslint.org/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For version control, I used [Git](https://git-scm.com/) & [GitHub](https://github.com/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project is deployed on [GitHub Pages](https://pages.github.com/) and its CI/CD is done via [GitHub Actions](https://github.com/features/actions).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The last update feature uses [GitHub Events API](https://docs.github.com/en/rest/activity/events) for functioning.

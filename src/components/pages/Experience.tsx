@@ -60,6 +60,22 @@ function Experience() {
       ),
     },
     {
+      key: 'ongrid',
+      title: t('experience.ongrid.title'),
+      subtitle: t('experience.ongrid.subtitle'),
+      icon: <LaptopMac />,
+      comment: (
+        <span>
+          {t('experience.ongrid.comment_first')}
+          <Typography variant="body2" color="primary" sx={{ display: 'inline' }}>
+            {t('experience.ongrid.comment_highlighted')}
+          </Typography>
+          {t('experience.ongrid.comment_last')}
+          <Emoji label="sparkles" symbol="✨" />
+        </span>
+      ),
+    },
+    {
       key: 'next',
       title: t('experience.next.title'),
       subtitle: <Emoji label="smiling face with sunglasses" symbol="😎" />,
